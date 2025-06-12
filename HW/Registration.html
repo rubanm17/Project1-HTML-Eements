@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <meta charset="utf-8">
+    <meta content="width-device-width scale=1.0">
+    <style>
+        label {
+            text-align:justify;
+            margin: 20px;
+        }
+        input {
+            margin: 5px;
+            text-align: justify;
+        }
+        #submit {
+            margin-left: 20px;
+        }
+    </style>
+    <body>
+        <h1>Personal details</h1>
+        <form>
+        <fieldset>
+        <legend>Personal details</legend>        
+        <label>Name:</label>
+        <input type="text"><br>
+        <label>Email ID:</label>
+        <input type="email"><br>
+        <label>Password:</label>
+        <input type="password"><br>
+        <label>Confirm Password:</label>
+        <input type="password"><br>
+        <label>Contact Number:</label>
+        <input type="tel" pattern="[0-9]{5}-[0-9]{5}"><br>
+        <label>Gender:</label>
+        <input type="radio">Male
+        <input type="radio">Female<br>
+        <label>City:</label>
+        <input type="checkbox">Madurai
+        <input type="checkbox">Chennai
+        <input type="checkbox">Bangalore
+        <input type="checkbox">Tokyo
+        <input type="checkbox">Honkong
+        <input type="checkbox">London
+        <input type="checkbox">New York<br>
+        <label>Job</label>
+        <select name="Job">
+            <option value="Engineer">Engineer</option>
+            <option value="IT">IT</option>
+            <option value="Government">Government</option>
+            <option value="Business">Business</option>
+        </select><br>
+        <input type="submit" id="submit"><br>
+        </fieldset>
+    </form> 
+    </body>
+</html>
