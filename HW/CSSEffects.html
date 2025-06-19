@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*The Animation Code */
+            @keyframes example{
+                0%{background-color: red;}
+                25%{ background-color: yellow;}
+                50%{background-color: blue;}
+                100%{background-color: green;}
+            }
+            /* The element to apply the animation to */
+            div#anime{
+                width: 1265px;
+                height: 300px;
+                background-color: red;
+                animation-name: example;
+                animation-duration: 4s;
+                font-size: xx-large;
+            }
+            /* Background */
+            div#back{
+                background-color: rbg(15,15,14);
+                background-image: url(background.jpg);
+                background-position: center;
+                background-attachment: fixed;
+                background-size: 50%;
+                font-size: large;
+                font-style: bold;
+                height: 315px;
+                -webkit-text-fill-color: white;
+            } 
+            /* Gradient */
+            #pain{
+                background-image: linear-gradient(orange,red,blue,black);
+                text-align: center;
+                font-size: xx-large;
+                color: grey;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="back">Hello World !</div>
+        <div id="pain">This is Codignal</div>
+        <div id="anime">Lets Code Together</div>
+    </body>
+</html>
