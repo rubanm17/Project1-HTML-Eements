@@ -1,4 +1,5 @@
-h3,h4,h5{
+h1{
     font-size:medium ;
-    background-color: aquamarine;
+    background-color: gray;
+    text-emphasis-color: blue;
 }
