@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Horizontal Scroll spy</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link type="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            body{
+                position: relative;
+            }
+            p{
+                font-size: 10px;
+            }
+            .sec{
+                padding-top: 50px;
+                height: 500px;
+                color: white;
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offsat="50">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Codingal</a>
+                </div>
+                <div class="collapse collapse-navber" id="#myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a class="#section1">Section1</a></li>
+                        <li><a class="#section2">Section2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="Section1" class="container-fluid sec">
+            <h1>Section1</h1>
+            <h3>Codingal</h3>
+            <h5>
+            Codingal is on a mission to inspire school kids to fall in love with coding.
+            Coding is proven to develop creativity, logical thinking and problem solving skills in kids.
+            Coding is an essential skill of the future and more than 60% of all jobs in STEM-related fieldsrequire knowledge of code.
+            Kids who start learning to code at a young age are guaranteed to becomeleaders, creators and entrepreneurs of the future.
+            </h5>
+
+            <p>Scroll This Section</p>
+        </div>
+        <div class="container-fluid sec" id="section2">
+            <h1>Section2</h1>
+            <h3>Codingal</h3>
+            <p>Scroll this expeience</p>
+        </div>
+    </body>
+</html>
