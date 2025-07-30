@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <div class="container">
+        <h2>Arithematic operations</h2>
+        <p id="ad"></p>
+        <p id="sb"></p>
+        <p id="mp"></p>
+        <p id="dev"></p>
+        <p id="in"></p>
+        <script>
+            var a=6;
+            var b=12;
+            var c=a+b;
+            var d=b-a;
+            var e=a*b;
+            var f=b/a;
+            var g=6%2;
+            document.getElementById("ad").innerHTML="The addition value of 6 and 12 is "+ c;
+            document.getElementById("sb").innerHTML="The subtraction value of 12 and 6 is "+ d;
+            document.getElementById("mp").innerHTML="The Multiplication value of 6 and 12 is "+ e;
+            document.getElementById("dev").innerHTML="The Division value of 12 and 6 is "+ f;
+            document.getElementById("in").innerHTML="The Modulo value of 6 and 2 is "+ g;
+        </script>
+        </div>
+    </body>
+</html>
