@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <heda>
+        <title>Greeting</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </heda>
+    <body>
+        <p>Please Click Here</p>
+        <p id="demo" onclick="greetUser(name)"></p>
+        <script>
+            function greetUser(name){
+            var n="Hi,I am "+ name;
+            document.getElementById("demo").innerHTML=n;  
+            }
+            greetUser("Ishant");
+        </script>
+    </body>
+</html>
