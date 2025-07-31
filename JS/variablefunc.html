@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables in function </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <p>A Function can access variables defined insied the function:</p>
+        <button type="button" onclick="myFunction()">Click Me</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+
+            var b=5;
+            function myfunction(){
+                var a=4;
+                document.getElementById(demo).innerhtml= b*a;
+            }
+            document.getElementById(demo1).innerhtml=a;
+            document.getElementById(demo1).innerhtml=b;
+        </script>
+    </body>
+</html>
