@@ -7,12 +7,13 @@
     </heda>
     <body>
         <p>This is the multiplication of 99*99</p>
-        <p id="result"></p>
+        <p id="result" onclick="myfunction(x,y)"></p>
         <script>
-            var    y=99;
-            var    x=99;
-            var    z=x*y;
-            document.getElementById("result").innerHTML=z;
+            function myfunction(x,y){
+            var z=x*y;
+            document.getElementById("result").innerHTML="The value of x is "+x+ " and y is "+y+ ",the value of z is "+z;
+            }
+            myfunction(99,99);
         </script>
     </body>
 </html>
