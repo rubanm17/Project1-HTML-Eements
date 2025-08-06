@@ -9,14 +9,15 @@
         <h2>Java Script for Loop</h2>
         <p id="demo"></p>
         <script>
-            var fruits= ["Apple","Mango","Grapes","Water Melon","Jack fruit","Banana"];
-            //var text;
+            var fruits = ["Apple","Mango","Grapes","Water Melon","Jack fruit","Banana"];
+            var text = "";
 
             for (i=0;i< fruits.lenght; i++){
-                var text = fruits[i]+"<br>";
+                text += fruits[i]+"<br>";
                 //document.getElementById("demo").innerHTML=text;
-                document.write(text);
+                //document.write(text);
             }
+            document.getElementById("demo").innerHTML=text;
         </script>
     </body>
 </html>
