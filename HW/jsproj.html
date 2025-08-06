@@ -7,6 +7,7 @@
    </head>
    <body>
      <p id="demo"></p>
+     <p id="demo1"></p>
         <script>
             var day;
             switch(new Date().getDay()){
@@ -36,11 +37,11 @@
             document.getElementById("demo").innerHTML="Today is " + day;
             
             var numbers= ["1.079","2.9083904","3.98","4.0297826","97435","8579455758"];
-
-            for (i=0;i< numbers; i++){
-                var text = numbers[i]+"<br>";
-                document.write(text);
+            var text = "";
+            for (var i = 0; i < numbers.length; i++){
+                text += numbers[i]+"<br>";
             }
+            document.getElementById("demo1").innerHTML = text;
         </script>
    </body>
 </html>
