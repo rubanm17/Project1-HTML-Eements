@@ -6,11 +6,39 @@
         <meta name="viewport" content="device-width-device,initial-scale-1.0">
     </head>
     <body>
-        <h3>Sum of Arguments by Trignometric Functions</h3>
+        <h1>Sum of Arguments by Trignometric Functions</h1>
+        <h4>The values of ArcSin</h4>
         <p id="demo"></p>
+        <h4>The values of ArcCos</h4>
         <p id="demo1"></p>
+        <h4>The vlues of ArcTan</h4>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
         <script>
-            
+            function smtrig() {
+                var sum = 0;
+                var text = "";
+                var text1 = "";
+                var text2 = "";
+                for( let i = 0 ; i < arguments.length ; i++ ) {
+                    if( arguments[i] < 2 ) {
+                        value = Math.asin(arguments[i]);
+                        value1 = Math.acos(arguments[i]);
+                        value2 = Math.atan(arguments[i]);
+                        text += "The value of arcsin(" + arguments[i] + ") is " + value + "<br>";
+                        text1 += "The value of arccos(" + arguments[i] + ") is " + value1 + "<br>";
+                        text2 += "The value of arctan(" + arguments[i] + ") is " + value2 + "<br>"; 
+                        sum += value + value1 + value2;
+                    }
+                }                
+                document.getElementById("demo").innerHTML = text;
+                document.getElementById("demo1").innerHTML = text1;
+                document.getElementById("demo2").innerHTML = text2;
+                document.getElementById("demo3").innerHTML = "The sum of arguments are " + sum;
+            }
+            document.getElementById("demo").innerHTML= smtrig(-1, -0.8, -0.7, -0.5, 0, 0.5, 0.7, 0.8, 1);
+            document.getElementById("demo1").innerHTML= smtrig(-1, -0.8, -0.7, -0.5, 0, 0.5, 0.7, 0.8, 1);
+            document.getElementById("demo2").innerHTML= smtrig(-1, -0.8, -0.7, -0.5, 0, 0.5, 0.7, 0.8, 1);
         </script>
     </body>
 </html>
