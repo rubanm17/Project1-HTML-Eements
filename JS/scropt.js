@@ -1,9 +1,9 @@
 function validation(e){
     e.preventDefault();
 
-    const email=document.getElementById('email').Value;
-    const pass=document.getElementById('password').Value;
-    const age=document.getElementById('age').Value;
+    const email=document.getElementById('email').value;
+    const pass=document.getElementById('password').value;
+    const age=document.getElementById('age').value;
     const msgBox=document.getElementById('message');
 
     let message='';
