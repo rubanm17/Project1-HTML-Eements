@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Object Data and Arrays</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Javascript Object Data</h2>
+        <p id="demo"></p>
+        <script>
+            var student = { 
+                name : "Ruban", 
+                age : "14",
+                grade : "9",
+                school : "Vikaasa World School",
+                fav_color : "Black and White"
+            };
+            document.getElementById("demo").innerHTML = "The Student name is "+ student.name + "<br> and doing his " + student.grade + "<br> in " + student.school + "<br> and favourite color is " + student.fav_color;
+        </script>
+        <h2>Javascript Arrays</h2>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <script>
+            var fav_color1 = ["Black" , "White" , "Red" , "Orange" , "Yellow"];
+            document.getElementById("demo1").innerHTML = fav_color1.join("*");
+            document.getElementById("demo2").innerHTML = fav_color1;
+            fav_color1.pop();
+            document.getElementById("demo3").innerHTML = fav_color1;
+        </script>
+    </body>
+</html>
