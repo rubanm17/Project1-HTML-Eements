@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>real Time Validation Using JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <h1>Real Time Validation Using JS</h1>
+        <hr>
+        <form id="loginform" onsubmit="validate(event)">
+            <!-- Fieldset Groups related elements in a form -->
+             <fieldset>
+
+                <!-- Email input Field -->
+                 <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                 </div>
+
+                 <!-- Password input field with a minimum lenght requirment -->
+                 <div>
+                    <label for="Password">Password:</label>
+                    <!-- minlenght attribute ensures the password is at least 8 characters long -->
+                    <input type="password" id="password" name="password" minlenght="8">
+                 </div>
+
+                 <!-- Age input field with minimum and maximum value reqiurments -->
+                  <div>
+                    <label for="age">Age:</label>
+                    <!-- min and max atrributes define the acceptable range of ages -->
+                    <input type="number" id="age" name="age" min="12" max="50">
+                 </div>
+
+                 <!-- Submit button for the form -->
+                  <button type="submit">Login</button>
+
+             </fieldset>
+        </form>
+        <!-- Div for displaying validation messages -->
+         <div id="message"></div>
+
+         <script src="scropt.js"></script>
+    </body>
+</html>
