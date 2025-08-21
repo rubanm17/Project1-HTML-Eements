@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Static Method in class</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Static Method in class</h2>
+        <p id="hello"></p>
+        <p id="hi"></p>
+        <p id="welcome"></p>
+        <script>
+            class student{
+                constructor(name){
+                this.studentname = name;
+            }
+            static hello(){
+                return "hello!";
+            }
+            static welcome(x){
+                return "Welcome " + x.studentname;
+            }
+            hi(){
+            return "Hi " + this.studentname;       
+            }
+        }
+        myname = new student("Carol");
+        document.getElementById("hello").innerHTML=student.hello();
+        document.getElementById("hi").innerHTML=myname.hi();
+        document.getElementById("welcome").innerHTML=student.welcome(myname);
+        </script>
+    </body>
+</html>
