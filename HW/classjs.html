@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Project "SMACK"</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Project SMACK</h2>
+        <p id="welcome"></p>
+        <p id="tt"></p>
+        <script>
+            class bat{
+                constructor(name){
+                  this.typename =  name ;
+                }
+                static Welcome(x){
+                    return  "Welcome " + x.typename ;
+                }
+                present(){
+                    return "I have a " + this.typename ;
+                }
+            }
+            class  power extends bat{
+                constructor(name,pow){
+                    super(name);
+                    this.kind = pow;
+                }
+                show(){
+                    return this.present() + ". It is a " + this.kind ;
+                }
+            }
+            let myRise =  new power("Stag","International");
+            let mygreet = new bat("Customer");
+            document.getElementById("welcome").innerHTML = bat.Welcome(mygreet) ;
+            document.getElementById("tt").innerHTML = myRise.show();
+        </script>
+    </body>
+</html>
