@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java script mapping an arry</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <p>Multiply every element in the arry with 10</p>
+        <p id="product_value"></p>
+        <script>
+            var numbers = [28,6,19,95];
+
+            function myFunction(num){
+                return num*10;
+            }
+            var newarray=numbers.map(myFunction);
+            document.getElementById("product_value").innerHTML=newarray;
+        </script>
+    </body>
+</html>
