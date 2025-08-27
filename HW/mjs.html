@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mapping an array and ordering the elements inside it</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Click the button to ascend or descend the elements</h2>
+        <button type="button" onclick="ascending()">ascending</button>
+        <button type="button" onclick="descending()">descending</button>
+        <p  id="result"></p>
+        <p id="value"></p>
+        <script>
+            var data=[5,55,555]
+            var val=[9,64,845,378,8]
+            document.getElementById("value").innerHTML=val;
+
+            function ascending(){
+                val.sort(function(a,b){return(a-b)})
+                document.getElementById("value").innerHTML=val;
+            }
+
+            function descending(){
+                val.sort(function(a,b){return(b-a)})
+                document.getElementById("value").innerHTML=val;
+            }
+
+            function myData(dat){
+                return dat*2;
+            }
+            var newarray=data.map(myData)
+            document.getElementById("result").innerHTML=newarray;
+        </script>
+    </body>
+</html>
