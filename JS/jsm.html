@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript String Methods</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Javascript String Methods</h2>
+
+        <p id="search_result"></p>
+        <p id="replace_result"></p>
+        <p id="string_replace"></p>
+
+        <script>
+            var str = "How are doing for the day";
+            var search_position = str.search("doing");
+            var txt = str.replace("How are ","How are you ")
+            var x=70;
+            var y=90;
+            document.getElementById("search_result").innerHTML=search_position;
+            document.getElementById("replace_result").innerHTML=txt;
+
+            document.getElementById("string_replace").innerHTML= String(x) + String(y);
+        </script>
+    </body>
+</html>
