@@ -10,10 +10,12 @@
         <p id="err_msg"></p>
         <script>
             try{
-                addalert("Error");
+                var a = 10;
+                product = a*b;                
+                document.getElementById("err_msg").innerHTML = "The product of a and b is " + a;
             }
             catch(err){
-                document.getElementById("err_msg").innerHTML=err.message;
+                document.getElementById("err_msg").innerHTML = err.message;
             }
         </script>
     </body>
