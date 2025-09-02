@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Async/Await</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Javascript Async/Await</h2>
+        <h1 id="result"></h1>
+        <script>
+            async function add(a,b){
+                let response = await a+b;
+                display(response);
+            }
+            function display(some){
+                document.getElementById("result").innerHTML=some;
+            }
+            add(5,20)
+        </script>
+    </body>
+</html>
