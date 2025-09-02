@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handling Error in Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Javascript Error Handling</h2>
+        <p id="err_msg"></p>
+        <script>
+            try{
+                addalert("Error");
+            }
+            catch(err){
+                document.getElementById("err_msg").innerHTML=err.message;
+            }
+        </script>
+    </body>
+</html>
