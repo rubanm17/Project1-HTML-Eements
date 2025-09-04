@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript async and await function</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <h2>Javascript Async/Await</h2>
+        <p id="result"></p>
+        <script>
+            async function multiply(a,b,c) {
+                let response =await(a*b*c)
+                display (response)
+            }
+            function display(response){
+                document.getElementById("result").innerHTML=response;
+            }
+            multiply(5,10,50)
+        </script>
+    </body>
+</html>
