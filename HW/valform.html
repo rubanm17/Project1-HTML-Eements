@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript validation in a form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale-1.0">
+    </head>
+    <body>
+        <script>
+            function validateForm(){
+                var x = document.forms["myform"]["fname"].value;
+                var y = document.forms["myform"]["fnum"].value;
+                if(x== "" && y==""){
+                    alert("Name/Age must be Filled out");
+                    return false;
+                }
+                else if(x =="" || y==""){
+                    if(x=="") {alert("Name is empty");}
+                    else {alert("Age is empty");}
+                    return false;
+                }
+                else if(y < 18){
+                    alert("Age should be more than 18");
+                    return false;
+                }
+                else {document.write("Sumitted");}
+            }
+        </script>
+        <form name="myform" onsubmit="validateForm()">
+            name:<input type="text" name="fname">
+            Age:<input type="number" name="fnum" min="18">
+            <input type="submit" value="submit">
+            <p id="message"></p>
+        </form>
+    </body>
+</html>
