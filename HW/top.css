@@ -2,10 +2,18 @@ html{
     scroll-behavior: smooth;      
 }
 
-/*body {
+body {
     background-color: #000;
     font-family:  'Times New Roman', serif;
-    background-image: url("https://i.pinimg.com/736x/56/bb/15/56bb15e123be9a86ad358654732c79cc.jpg");
-    height: 100%;
-    width: 100%;
-}*/
+}
+.container.section1 {
+    padding: 10px;
+}
+a.text-white.navigation-link.active {
+    color: orange !important;
+    text-decoration: none !important;
+}
+a:hover {
+    color: cornflowerblue !important;
+    text-decoration: none !important;
+}
