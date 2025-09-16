@@ -81,10 +81,54 @@
                         </div>
                     </div>
                 </div>
-            </div>   
+            </div>  
+            <div class="container toggle">
+                <div class="row">
+                    <div class="tabs">
+                        <button data-tab-value="#tab1" class="tablinks" onmouseover="openCity(event, 'tab1')">
+                            <h4>Starters</h4>
+                            <p>14 Dishes</p>
+                        </button>
+                        <button data-tab-value="#tab2" class="tablinks" onmouseover="openCity(event, 'tab2')">
+                            <h4>Main Course</h4>
+                            <p>38 Dishes</p>
+                        </button>
+                        <button data-tab-value="#tab3" class="tablinks" onmouseover="openCity(event, 'tab3')">
+                            <h4>Desserts</h4>
+                            <p>11 Dishes</p>
+                        </button>
+                    </div>
+                    <div id="tab1" class="tabcontent">
+                        <img src="https://i.pinimg.com/1200x/72/19/e6/7219e61d5c118f9ad3f6c58aa3f661d9.jpg">
+                    </div>
+
+                    <div id="tab2" class="tabcontent">
+                        <img src="https://i.pinimg.com/736x/59/81/85/5981859da80c1d8580654daf371d0ffe.jpg">
+                    </div>
+
+                    <div id="tab3" class="tabcontent">
+                        <img src="https://i.pinimg.com/1200x/f4/ce/e5/f4cee5e7149731cc9dd440115a194fbf.jpg">
+                    </div>
+
+                    <div class="clearfix"></div>                 
+                </div>
+            </div>
         </section>
-        <footer>
-            <p></p>
-        </footer>
+        <script type="text/javascript">
+
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+    </script>
     </body>
 </html>
