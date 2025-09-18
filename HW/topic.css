@@ -72,11 +72,11 @@ h2 {
     padding: 10px;
 }
 .tabs {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 30%;
-  height: 368px;
+    float: left;
+    border: 1px solid cornsilk;
+    background-color: azure;
+    width: 30%;
+    height: 368px;
 }
 
 /* Style the buttons inside the tab */
