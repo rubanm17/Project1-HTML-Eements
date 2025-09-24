@@ -1,0 +1,76 @@
+body {
+    padding: 20px;
+}
+.container_main {
+    text-align: center;
+    border: 5px solid chocolate;
+    padding: 10px;
+}
+h3 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-variant-caps: petite-caps;
+    text-align: center;
+}
+.container_first {
+    padding-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+.first {
+    padding: 20px;
+}
+label {
+    font-size: 24px;
+    text-align: left;
+    font-weight: 600;
+}
+input#amt {
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid gray;
+    text-align: justify;
+}
+.section {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sec-left {
+    float: left;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.sec-right {
+    float: right;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+button {
+    width: 200px;
+    height: 60px;
+    background-color: antiquewhite;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.sec-center {
+    position: relative;
+    float: inherit;
+    padding: 60px;
+}
+input#amt1 {
+    border: none;
+    color: inherit;
+    outline: none;
+    background: transparent;
+    width: 200px;
+    height: 40px;
+    font-size: 24px;
+    padding: 10px;
+    text-align: justify;
+}
