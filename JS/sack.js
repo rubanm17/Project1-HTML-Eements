@@ -1,13 +1,16 @@
 function gethistory(){
+    alert("Hi"+document.getElementById("history-value").innerText);
     return document.getElementById("history-value").innerText;
 }
 function printHistory(num){
     document.getElementById("history-value").innerText=num;
 }
-function getoutput(){
+function getOutput(){
+    alert("1"+document.getElementById("output-value").innerText);
     return document.getElementById("output-value").innerText;
 }
 function printoutput(num){
+    alert("pri"+num);
     if(num==""){
         document.getElementById("output-value").innerText=num;
     }
@@ -23,7 +26,8 @@ function getFormattedNumber(num){
     var value = n.toLocaleString("en");
     return value;
 }
-function reverseNumberFormt(num){
+function reverseNumberFormat(num){
+    alert("reverse"+num);
     return Number(num.replace(/./g,''))
 }
 var operator = document.getElementsByClassName("operator");
@@ -43,9 +47,9 @@ for(var i =0;i<operator.length;i++){
         else{
             var output=getOutput();
             var history=gethistory();
-            if(output==""&&history!=""){
+            if(output == "" && history != ""){
                     if(isNaN(history[history.lenght-1])){
-                        history=history.substr(0,history.lenght-1);
+                        history = history.substr(0, history.length-1);
                     }
             }
             if(output!="" || history!=""){
@@ -65,8 +69,8 @@ for(var i =0;i<operator.length;i++){
         }
     });
 }
-var number=document.getElementById("number");
-alert(number);
+var number=document.getElementsByClassName("number");
+//alert(number);
 for(var i =0;i< number.length;i++){
     number[i].addEventListener('click',function(){
         var output=reverseNumberFormat(getOutput());
