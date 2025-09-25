@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bank Calculation using Calculation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width-device,initial-scale=1.0">
+        <link href="trap.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container_main">
+            <div class="row">
+                <div class="top">
+                    <h3>Banking App</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container_first">
+            <div class="row">    
+                <div class="first">
+                    <label for="amt">Enter Transaction Amount :</label>
+                    <input type="text" id="amt" class="amt" placeholder="Enter the amount" min="1" max="99999999999999">
+                </div>    
+                <div class="container">
+                    <div class="row">
+                        <div class="section">
+                            <div class="sec-left">
+                                <button id="credit" class="credit" onclick="getValue()" oncontextmenu="putValue(event)">Credit</button>
+                            </div>
+                            <div class="sec-right">
+                                <button id="debit" class="debit" onclick="putValue(event)">Debit</button>
+                            </div>
+                        </div>
+                    </div>                      
+                </div>
+                <div class="sec-center">
+                    <label for="amt1">Your Account Balance is :</label>
+                    <input type="text" id="amt1" class="amt1" placeholder="Rs. 0">
+                </div>
+            </div>
+        </div>
+        <script>
+            var z;
+            function getValue() {
+                const x = document.getElementById("amt").value;
+                const y = document.getElementById("amt1").value;
+                if(x != 0) {
+                    z = x + y;
+                }else {
+                    alert("Enter the value")
+                }
+                document.getElementById("amt1").value = "Rs." + z;
+            }
+            function putValue(e) {
+                e.preventDefault();
+                const x = document.getElementById("amt").value;
+                const y1 = document.getElementById("amt1").value;
+                const y = y1.replace("Rs.", "").trim();
+                z = y - x;
+                if(z != 0) {
+                  document.getElementById("amt1").value="Rs." + z;  
+                } else {
+                document.getElementById("amt1").value="Rs." + z;
+                }
+            }
+        </script>
+    </body>
+</html>
