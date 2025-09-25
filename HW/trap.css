@@ -83,3 +83,10 @@ input#amt1 {
     padding: 10px;
     text-align: justify;
 }
+p#valid {
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: red;
+}
