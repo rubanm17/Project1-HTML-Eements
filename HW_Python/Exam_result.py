@@ -1,22 +1,14 @@
-m1 = int(input("Enter the First Subject Mark"))
-m2 = int(input("Enter the Second Subject Mark"))
-m3 = int(input("Enter the Third Subject Mark"))
-m4 = int(input("Enter the Fourth Subject Mark"))
-m5 = int(input("Enter the Fifth Subject Mark"))
-subjects = int(input("Enter the Total Subjects"))
+w_days = int(input("Total number of Working Days : "))
+days_abs = int(input("Total number of Days for Absent : "))
 
-total = (m1+m2+m3+m4+m5) / subjects
+total = (days_abs / w_days) * 100
 print(total)
 
-if total >= 85 :
-    print("Grade is 'A'")
+if total >= 95 :
+    print("Out Standing Eligible for the Exam")
+elif total >= 85 :
+    print("Excellent Eligible for the Exam")
 elif total >= 75 :
-    print("Grade is 'B'")
-elif total >= 65 :
-    print("Grade is 'C'")
-elif total >= 55 :
-    print("Grade is 'D'")
-elif total >= 45 :
-    print("Grade is 'E'")
+    print("Good Eligible for the Exam")        
 else :
-    print("Grade is 'F'")            
+    print("Sorry, You are below 75% so cant sit for the exam")    
