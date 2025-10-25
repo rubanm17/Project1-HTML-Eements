@@ -1,0 +1,7 @@
+f_data = ('Ruban','Maghima',15,150,35,'Mahs')
+print("The Tuple list of a data are : ")
+print(f_data)
+print("\n")
+f_data = list(f_data)
+print("The Tuple is coverted to List : ")
+print(f_data)
