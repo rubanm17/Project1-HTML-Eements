@@ -1,0 +1,11 @@
+Data types:
+*Alpha numericals
+*boolean
+*text
+*character
+*integer
+.integers
+.non-integers
+.decimal
+.currency
+.date/time
