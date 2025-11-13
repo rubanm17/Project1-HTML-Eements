@@ -1,0 +1,7 @@
+File in write mode....This is a sample file for read and write demnstration.
+File in append mode....The subjects i love most is as follows:
+1.Maths 
+2.Physics 
+3.Chemistry 
+4.Biology 
+5.ICT
