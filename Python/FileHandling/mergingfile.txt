@@ -1,0 +1,11 @@
+*Alpha numericals
+*boolean
+*text
+*character
+*integer
+.integers
+.non-integers
+.decimal
+.currency
+.date/time
+Hello! I am penguin and I am 1 year old.
