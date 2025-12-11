@@ -1,0 +1,8 @@
+for function 1 , the algorithm goes like this:
+    (4(4+1))/2
+for function2 the algorithmgoes like:
+    1+2+3+4
+so num of iterations will be 1+1+1+1=4
+for function3 the algo goes like:
+    1+(1+1)+(1+1+1)+(1+1+1+1)+(1+1+1+1+1)
+so num = 1+2+3+4+5=15
