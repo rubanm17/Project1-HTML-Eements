@@ -1,4 +1,3 @@
-# Inputs (change values 0 or 1)
 A = int(input("enter the value for a:"))
 B = int(input("enter the value for b:"))
 C = int(input("enter the value for c:"))
