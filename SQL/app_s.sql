@@ -12,7 +12,8 @@ INSERT INTO DEPARTMENT (EMP_ID, NAME, DEPT_ID, MANAGER_ID, SALARY) VALUES
 ('E002', 'Bob Smith', 'D002', 'M002', 62000),
 ('E003', 'Charlie Brown', 'D001', 'M001', 58000),
 ('E004', 'Diana Prince', 'D003', 'M003', 82000),
-('E005', 'Ethan Hunt', 'D002', 'M002', 54000);
+('E005', 'Ethan Hunt', 'D002', 'M002', 54000),
+('E006', 'Gamingpro', 'D002', 'M002', 50000);
 
 SELECT DEPT_ID AS "Department Code",
     Count(*) AS "NO of EMP"
@@ -35,7 +36,7 @@ FROM DEPARTMENT
 WHERE MANAGER_ID = 'M002'
 GROUP BY DEPT_ID;
 
-SELECT DEPT_ID, COUNT(*) AS "NO of EMP",
+SELECT DEPT_ID, COUNT(*) AS "NO of EMP"
 FROM DEPARTMENT
 GROUP BY DEPT_ID
 HAVING COUNT(*) > 2;
