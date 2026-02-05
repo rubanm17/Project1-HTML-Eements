@@ -1,10 +1,14 @@
+DROP TABLE IF EXISTS Orders;
+DROP TABLE IF EXISTS Customer;
+DROP TABLE IF EXISTS Salesman;
+
 CREATE TABLE IF NOT EXISTS Salesman(
-  Salesman_id TEXT PRIMARY KEY,
+  salesman_id TEXT PRIMARY KEY,
   name TEXT,
   city TEXT,
-  Comission TEXT
+  commission TEXT
 );
-INSERT INTO Salesman(Salesman_id,name,city,Comission)
+INSERT INTO Salesman(Salesman_id,name,city,commission)
 VALUES
   ("5001","James Hoog","New York","0.15"),
   ("5002","Nail Knite","Paris","0.13"),
@@ -57,13 +61,13 @@ JOIN Salesman ON Customer.city = Salesman.city;
 -- Linking customers to their salesmen
 SELECT Customer.cust_name, Salesman.name
 FROM Customer
-JOIN Salesman ON Customer.Salesman_id = Salesman.Salesman_id;
+JOIN Salesman ON Customer.Salesman_id = Salesman.salesman_id;
 
 -- Fetching orders where customer's city does not match salesman's city
 SELECT Orders.ord_no, Customer.cust_name, Orders.customer_id, Orders.Salesman_id
 FROM Orders
 JOIN Customer ON Orders.customer_id = Customer.customer_id
-JOIN Salesman ON Orders.Salesman_id = Salesman.Salesman_id
+JOIN Salesman ON Orders.Salesman_id = Salesman.salesman_id
 WHERE Customer.city <> Salesman.city;
 
 -- Fetching all orders with customer names
@@ -74,7 +78,7 @@ JOIN Customer ON Orders.customer_id = Customer.customer_id;
 -- Customers with grades
 SELECT Customer.cust_name AS "Customer", Customer.grade AS "Grade"
 FROM Orders
-JOIN Salesman ON Orders.Salesman_id = Salesman.Salesman_id
+JOIN Salesman ON Orders.Salesman_id = Salesman.salesman_id
 JOIN Customer ON Orders.customer_id = Customer.customer_id
 WHERE Customer.grade IS NOT NULL;
 
@@ -84,14 +88,14 @@ Customer.city AS "City",
 Salesman.name AS "Salesman",
 Salesman.commission
 FROM Customer
-JOIN Salesman ON Customer.Salesman_id = Salesman.Salesman_id
+JOIN Salesman ON Customer.Salesman_id = Salesman.salesman_id
 WHERE Salesman.commission BETWEEN 0.12 AND 0.14;
 
 -- Calculating commissions for orders where customer grade is 200 or more
 SELECT Orders.ord_no, Customer.cust_name, Salesman.commission AS "Commission%",
 Orders.purch_amt * Salesman.commission AS "Commission"
 FROM Orders
-JOIN Salesman ON Orders.Salesman_id = Salesman.Salesman_id
+JOIN Salesman ON Orders.Salesman_id = Salesman.salesman_id
 JOIN Customer ON Orders.customer_id = Customer.customer_id
 WHERE Customer.grade >= 200;
 
