@@ -2,6 +2,17 @@ import sqlite3
 
 conn = sqlite3.connect("school.db")
 
+conn.execute("""
+CREATE TABLE students (
+    id INTEGER,
+    name TEXT,
+    age INTEGER,
+    marks INTEGER,
+    city TEXT
+)
+""")
+conn.commit()    
+
 print("ALL STUDENTS:")
 for row in conn.execute("SELECT * FROM students"):
     print(row)
