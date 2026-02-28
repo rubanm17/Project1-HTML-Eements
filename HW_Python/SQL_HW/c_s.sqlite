@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS C_S;
+
+CREATE TABLE C_S {
+    SNO INTEGER PRIMARY KEY NOT NULL,
+    Roll_NO INTEGER NOT NULL,
+    Name TEXT NOT NULL,
+    AGE INTEGER DEFAULT 15,
+    GENDER TEXT NOT NULL,
+    Email_ID TEXT NOT NULL,
+    Contact_No REAL NOT NULL
+};
+
+INSERT INTO C_S (SNO, Roll_NO, Name, AGE, GENDER, Email_ID, Contact_No) VALUES
+(1, 101, 'Anita', 15, 'Female', 'anita10@gmail.com', 9876543210),
+(2, 102, 'Rahul', 16, 'Male', 'rahul10@gmail.com', 9123456789),
+(3, 103, 'Sneha', 15, 'Female', 'sneha10@gmail.com', 9988776655),
+(4, 104, 'Amit', 17, 'Male', 'amit10@gmail.com', 9012345678),
+(5, 105, 'Anjali', 15, 'Female', 'anjali10@gmail.com', 8899776655);
