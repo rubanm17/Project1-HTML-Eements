@@ -1,6 +1,6 @@
 import pandas as pd
 import sqlite3
-database = "match.sqlite"
+database = "match_2.sqlite"
 conn = sqlite3.connect(database)
 
 table = pd.read_sql_query("SELECT name FROM sqlite_master WHERE type='table';", conn)
