@@ -1,0 +1,49 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set(style='ticks')
+
+weather = pd.read_csv('test.csv')
+
+print(weather.head())
+
+print(weather.info())
+
+sns.barplot(x=weather['humidity'], y=weather['temperature'])
+
+sns.distplot(weather['humidity'])
+plt.show()
+
+sns.distplot(weather['temperature'], kde=False , rug=True)
+plt.show()
+
+sns.jointplot(x=weather['humidity'], y=weather['temperature'])
+plt.show()
+
+sns.jointplot(x=weather['humidity'], y=weather['temperature'] , kind='hex')
+plt.show()
+
+sns.jointplot(x=weather['humidity'], y=weather['temperature'] , kind='kde')
+plt.show()
+
+sns.pairplot(weather['humidity', 'temperature', 'air_pollution_index'])
+plt.show()
+
+sns.stripplot(x=weather['weather_type'], y=weather['temperature'])
+plt.show()
+
+sns.stripplot(x=weather['weather_type'], y=weather['temperature'], jitter=True)
+plt.show()
+
+sns.swarmplot(x=weather['humidity'], y=weather['temperature'])
+plt.show()
+
+sns.swarmplot(x=weather['humidity'], y=weather['temperature'], hue=weather['weather_type'])
+plt.show()
+
+sns.countplot(x=weather['weather_type'])
+plt.show()
+
+sns.countplot(x=weather['weather_type'],y=weather['temperature'],hue=weather['weather_type'])
+plt.show()
