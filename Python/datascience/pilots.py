@@ -12,10 +12,7 @@ print(weather.info())
 
 sns.barplot(x=weather['humidity'], y=weather['temperature'])
 
-sns.distplot(weather['humidity'])
-plt.show()
-
-sns.distplot(weather['temperature'], kde=False , rug=True)
+sns.histplot(weather['humidity'])
 plt.show()
 
 sns.jointplot(x=weather['humidity'], y=weather['temperature'])
@@ -27,7 +24,7 @@ plt.show()
 sns.jointplot(x=weather['humidity'], y=weather['temperature'] , kind='kde')
 plt.show()
 
-sns.pairplot(weather['humidity', 'temperature', 'air_pollution_index'])
+sns.pairplot(weather[['humidity', 'temperature', 'air_pollution_index']])
 plt.show()
 
 sns.stripplot(x=weather['weather_type'], y=weather['temperature'])
@@ -45,5 +42,5 @@ plt.show()
 sns.countplot(x=weather['weather_type'])
 plt.show()
 
-sns.countplot(x=weather['weather_type'],y=weather['temperature'],hue=weather['weather_type'])
+sns.countplot(x=weather['weather_type'],hue=weather['weather_type'])
 plt.show()
