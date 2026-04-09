@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load dataset
-df = pd.read_csv('Penguinssss_Data.csv')
+df = pd.read_csv('Penguins_Data.csv')
 
 # Extract features (drop nulls for clean plotting)
 culmen_length = df['culmen_length_mm'].dropna()
