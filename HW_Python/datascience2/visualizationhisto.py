@@ -2,31 +2,32 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load dataset
-df = pd.read_csv('Penguins_Data.csv')
+df = pd.read_csv('PenguinsData1.csv')
 
-# Extract features (drop nulls for clean plotting)
-culmen_length = df['culmen_length_mm'].dropna()
-culmen_depth = df['culmen_depth_mm'].dropna()
+# Use correct column names
+culmen_length = df['bill_length_mm'].dropna()
+culmen_depth = df['bill_depth_mm'].dropna()
 flipper_length = df['flipper_length_mm'].dropna()
 body_mass = df['body_mass_g'].dropna()
 
-# Combine like your example
-data = [culmen_length, culmen_depth, flipper_length, body_mass]
+# Same style as your sample
+type = [culmen_length, culmen_depth, flipper_length, body_mass]
 
-# Labels and colors
-labels = ['Culmen Length', 'Culmen Depth', 'Flipper Length', 'Body Mass']
 colors = ['g', 'r', 'b', 'y']
+label = ['Bill Length', 'Bill Depth', 'Flipper Length', 'Body Mass']
 
-# Custom bins (adjusted for penguins data)
 bins = [0, 50, 100, 150, 200, 300, 6000]
 
-# Labels
-plt.xlabel("Penguin Measurements")
+plt.xlabel("Penguin Features")
 plt.ylabel("Count")
 
-# Histogram (same style as your sample)
-plt.hist(data, bins=bins, rwidth=0.9, color=colors, label=labels)
+plt.hist(type,
+         bins=bins,
+         rwidth=0.95,
+         color=colors,
+         label=label,
+         orientation="horizontal")
 
 plt.legend()
-plt.title("Histogram of Penguin Features")
+plt.title("Histogram of Penguin Data")
 plt.show()
