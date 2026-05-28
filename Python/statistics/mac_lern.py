@@ -86,8 +86,8 @@ pairs = [
         ["Health is very important, but I am just a computer program, so I don't have health issues.",]
     ],
     [
-        r"(.*) (sports|game|sport)?",
-        ["I'm a big fan of soccer.",]
+        r" I like (.*) very much (sports|game|sport)?",
+        ["I'm a big fan of it.",]
     ],
     [
         r"who (.*) sportsperson ?",
