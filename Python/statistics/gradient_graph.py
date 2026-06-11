@@ -20,8 +20,8 @@ def gradient_descent(objective, derivative, bounds, n_iter, step_size):
         solutions.append(solution)
         scores.append(solution_eval)
 
-        print('>%d f(%s) = %.5f' % (i, solutions, solution_eval))
-    return [solutions, scores]
+        print('>%d f(%s) = %.5f' % (i, solution, solution_eval))
+    return solutions, scores
 
 bounds = asarray([[-1.0, 1.0]])
 
