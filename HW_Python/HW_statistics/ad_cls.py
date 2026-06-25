@@ -6,7 +6,6 @@ dataset = pd.read_csv("glass.csv")
 
 sns.set_style('dark')
 import matplotlib.pyplot as plt
-plt.style.use(['https://gist.githubusercontent.com/BrendanMartin/01e71bb9550774e2ccff3af7574c0020/raw/6fa9681c7d0232d34c9271de9be150e584e606fe/lds_default.mplstyle'])
 plt.rcParams.update({"figure.figsize":(8,6),"axes.titlepad":22.0})
 
 print("Target variables:", dataset['target_names'])
