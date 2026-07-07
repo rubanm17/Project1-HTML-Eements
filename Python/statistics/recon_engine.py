@@ -47,3 +47,12 @@ userprof
 genretl = m_cp.set_index(m_cp['movieId'])
 genretl
 genretl = genretl.drop(['movieId','title','genres','year'],axis=1)
+genretl.head()
+recon_df = ((genretl*userprof).sum(axis=1)/userprof.sum())
+recon_df.head()
+
+recon_df = recon_df.sort_values(ascending=False)
+recon_df.head()
+
+recontl = m_df.loc[m_df['movieId'].isin(recon_df.head(20).keys())]
+recontl
