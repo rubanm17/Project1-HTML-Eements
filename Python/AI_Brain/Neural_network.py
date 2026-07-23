@@ -3,7 +3,7 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense
 
-df = pd.read_csv('Housing_data.csv')
+df = pd.read_csv('housing_data.csv')
 print(df.head())
 
 y = df.pop('AboveMedianPrice')
