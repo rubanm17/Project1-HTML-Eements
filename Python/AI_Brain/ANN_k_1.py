@@ -32,3 +32,32 @@ x_train = scaler.fit_transform(x_train)
 x_test = scaler.fit_transform(x_test)
 
 print(x_train)
+
+import keras 
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Activation
+from keras.layers import Dropout
+
+classifier = Sequential()
+
+classifier.add(Dense(units=6,kernal_initializer='he_uniform',activation='relu',input_dim=10))
+classifier.add(Dense(units=6,kernal_initializer='he_uniform',activation='relu'))
+classifier.add(Dense(units=1,kernal_initializer='glorot_uniform',activation='sigmoid'))
+classifier.compile(optimizer='Adamax',loss='binary_crossentropy',metrics=['accuracy'])
+
+model_history = classifier.fit(x_train,y_train,batch_size=10,epochs=100)
+print(classifier.summary())
+y_pred = classifier.predict(x_test)
+print(y_pred)
+y_pred = (y_pred>0.5)
+
+print(y_pred)
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test,y_pred)
+print(cm)
+
+from sklearn.metrics import accuracy_score
+score = accuracy_score(y_test,y_pred)
+print(score)
