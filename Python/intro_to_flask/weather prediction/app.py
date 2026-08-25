@@ -4,7 +4,6 @@ import urllib.request
 from urllib.parse import quote
 
 app = Flask(__name__)
-
 def fetch_json(url):
     with urllib.request.urlopen(url) as response:
         return json.loads(response.read().decode("utf-8"))
