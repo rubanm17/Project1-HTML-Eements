@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📅 Date Difference Calculator</h1>
+            <p class="subtitle">Find the number of days between two dates.</p>
+
+            <form method="POST">
+                <label for="date1">First Date</label>
+                <input type="date" id="date1" name="date1" required>
+
+                <label for="date2">Second Date</label>
+                <input type="date" id="date2" name="date2" required>
+
+                <button type="submit">Calculate Difference</button>
+            </form>
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+
+            {% if result %}
+                <div class="result">
+                    <h2>Result</h2>
+                    <p>{{ result.date1 }}</p>
+                    <div class="difference">{{ result.days }}</div>
+                    <p>day{{ "" if result.days == 1 else "s" }} between the two dates</p>
+                    <p class="dates">{{ result.date2 }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
