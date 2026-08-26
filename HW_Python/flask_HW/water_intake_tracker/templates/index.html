@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Intake Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>💧 Water Intake Tracker</h1>
+            <p class="subtitle">Track your daily water intake and reach your goal!</p>
+
+            <form method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="goal">Daily Water Goal (glasses)</label>
+                <input type="number" id="goal" name="goal" min="1" step="1"
+                       placeholder="Example: 8" required>
+
+                <label for="consumed">Glasses Consumed</label>
+                <input type="number" id="consumed" name="consumed" min="0" step="1"
+                       placeholder="Example: 5" required>
+
+                <button type="submit">Calculate Progress</button>
+            </form>
+
+            {% if result %}
+            <div class="result">
+                <h2>Great job, {{ result.name }}! 💦</h2>
+
+                <div class="stats">
+                    <div>
+                        <span>{{ result.consumed }}</span>
+                        <small>Consumed</small>
+                    </div>
+                    <div>
+                        <span>{{ result.goal }}</span>
+                        <small>Goal</small>
+                    </div>
+                    <div>
+                        <span>{{ result.progress }}%</span>
+                        <small>Progress</small>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: {{ result.progress }}%;"></div>
+                </div>
+
+                {% if result.remaining > 0 %}
+                    <p class="message">
+                        You need {{ result.remaining }} more glass{{ "" if result.remaining == 1 else "es" }}
+                        to reach your goal.
+                    </p>
+                {% else %}
+                    <p class="message success">🎉 You reached your daily water goal!</p>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
