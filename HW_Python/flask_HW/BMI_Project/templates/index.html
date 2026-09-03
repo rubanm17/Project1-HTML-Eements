@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <p>Enter your weight and height to calculate your Body Mass Index.</p>
+
+        <form method="POST">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" step="0.1" name="weight" id="weight" required>
+
+            <label for="height">Height (m)</label>
+            <input type="number" step="0.01" name="height" id="height" required>
+
+            <button type="submit">Calculate BMI</button>
+        </form>
+
+        {% if bmi %}
+        <div class="result">
+            <h2>Your BMI: {{ bmi }}</h2>
+            <p>Category: {{ category }}</p>
+        </div>
+        {% elif category %}
+        <div class="result">
+            <p>{{ category }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
