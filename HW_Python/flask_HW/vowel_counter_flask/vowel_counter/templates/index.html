@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vowel Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Vowel Counter</h1>
+        <form method="POST">
+            <input type="text" name="text" placeholder="Enter a string" required>
+            <button type="submit">Count Vowels</button>
+        </form>
+        {% if count is not none %}
+            <h2>Input: {{ text }}</h2>
+            <h2>Number of vowels: {{ count }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
