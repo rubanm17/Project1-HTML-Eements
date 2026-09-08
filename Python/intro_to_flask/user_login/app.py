@@ -15,7 +15,7 @@ def login():
         mydb = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="",
+            password="12345",
             database="Flask_login"
         )
 
