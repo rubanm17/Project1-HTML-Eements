@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ resume.name }} - Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="resume">
+    <header>
+        <div>
+            <h1>{{ resume.name }}</h1>
+            <h2>{{ resume.role }}</h2>
+        </div>
+        <div class="contact">
+            <p>{{ resume.email }}</p>
+            <p>{{ resume.phone }}</p>
+            <p>{{ resume.location }}</p>
+        </div>
+    </header>
+
+    <section>
+        <h3>Profile</h3>
+        <p>{{ resume.profile }}</p>
+    </section>
+
+    <section>
+        <h3>Education</h3>
+        {% for item in resume.education %}
+        <div class="item">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.place }} | {{ item.year }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section>
+        <h3>Skills</h3>
+        <div class="skills">
+            {% for skill in resume.skills %}
+            <span>{{ skill }}</span>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section>
+        <h3>Projects</h3>
+        {% for project in resume.projects %}
+        <div class="item">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.description }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section>
+        <h3>Experience</h3>
+        {% for item in resume.experience %}
+        <div class="item">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.company }} | {{ item.year }}</p>
+            <p>{{ item.description }}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section>
+        <h3>Languages</h3>
+        <p>{{ resume.languages | join(" | ") }}</p>
+    </section>
+
+    <section>
+        <h3>Contact Me</h3>
+        <form action="{{ url_for('contact') }}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
