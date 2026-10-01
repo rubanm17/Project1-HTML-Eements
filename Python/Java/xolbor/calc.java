@@ -1,38 +1,48 @@
+
 package xolbor;
 
 import java.util.Scanner;
 
-class add {
-    void a(int num1 , int num2){
-        int sum = num1 + num2;
-        System.out.println("The Addition of" + num1 + "and" + num2 + "is" + sum );
+class Calculator {
+    int a, b;
+
+    void add() {
+        System.out.println("Addition = " + (a + b));
+    }
+
+    void subtract() {
+        System.out.println("Subtraction = " + (a - b));
     }
 }
-class sub {
-    void b(int num1 ,int num2){
-        int sb = num2 - num1 ;
-        System.out.println("The Subtraction of" + num2 + "and" + num1 +"is" + sb );
+
+class MyCalculator extends Calculator {
+    void multiply() {
+        System.out.println("Multiplication = " + (a * b));
+    }
+
+    void divide() {
+        if (b != 0) {
+            System.out.println("Division = " + (a / (double)b));
+        } else {
+            System.out.println("Cannot divide by zero");
+        }
     }
 }
-class mul{
-    void c(int num1 , int num2){
-        int ml = num1 * num2;
-        System.out.println("The Multiplication of" + num2 + "and" + num1 +"is" + ml );
-    }
-}
-class div{
-    void d(int num1, int num2){
-        int dv = num2 / num1;
-        System.out.println("The Divsion of" + num2 + "and" + num1 +"is" + dv );
-    }
-}
-class calc {
-    public static void HW(String[] args){
+
+public class calc {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter the first number");
-        int num1 = sc.nextInt();
-        System.out.println("enterv the second number");
-        int num2 = sc.nextInt();
-        System.out.println("What method do you want to use");
+        MyCalculator c = new MyCalculator();
+
+        System.out.print("Enter two numbers: ");
+        c.a = sc.nextInt();
+        c.b = sc.nextInt();
+
+        c.add();
+        c.subtract();
+        c.multiply();
+        c.divide();
+
+        sc.close();
     }
 }
