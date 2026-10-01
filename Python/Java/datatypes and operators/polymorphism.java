@@ -3,6 +3,7 @@ class geometry{
         return 0;
     }
 }
+
 class triangle extends geometry{
     private double base;
     private double height;
