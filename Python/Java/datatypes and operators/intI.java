@@ -33,11 +33,11 @@ class car implements vehicle{
     }
     @Override
     public void speedup(int e){
-        speed = speed * e;
+        speed = speed + e;
     }
     @Override
     public void applyBrake(int f){
-        gear = speed * f;
+        gear = speed - f;
     }
     public void printState(){
         System.out.println("speed" + speed + "gear" + gear);
